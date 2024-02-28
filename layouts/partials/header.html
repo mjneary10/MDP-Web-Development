@@ -1,0 +1,69 @@
+<header>
+  <section class="grid grid-main">
+    <aside class="inner-block-left flex-center">
+      <p>Sign up for our web development course</p>
+      
+    </aside>
+
+    <aside class="inner-block-right flex-center">
+      <p>Sign up for out digital marketing course</p>
+    </aside>
+  </section>
+<hr>
+  <section class="grid grid-main">
+    <section class="normal-width-element">
+     
+        <section class="grid grid-top-nav">
+          
+            <div class="logo4">
+              <a href="{{ "/" | relURL }}">
+              <img src="/img/logo.webp" alt="">
+            </a>
+            </div>
+       
+          <nav class="mainNav4" id="myTopnav">
+            <ul class="list-reset">
+              <li><a href="{{ "/webdevelopment/" | relURL }}">Web Development</a></li>
+              <li><a href="{{ "/digitalmarketing/" | relURL }}">Digital Marketing</a></li>
+              <li><a href="{{ "/tutorials/" | relURL }}">Tutorials</a></li>
+              <li><a href="{{ "/about/" | relURL }}">About</a></li>
+              <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+            </ul>
+          </nav>
+            <div class="burger">
+              <a href="javascript:void(0);"  onclick="myFunction()">
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+              <div class="burger-bar"></div>
+            </a>
+            </div>
+        </section>
+      </div> 
+    </section>
+  </section>
+<hr>
+  <section class="grid grid-main">
+    <aside class="normal-width-element padding-small">
+      <div id="breadcrumbs-nav">
+        <a href="/">Home</a>
+        {{ .Scratch.Set "permalinkparts" (split .RelPermalink "/") }}
+        {{ range $index, $part := (.Scratch.Get "permalinkparts") }}
+            {{ range $i, $num := (seq 10) }}
+                {{ if ge $index $i }}
+                    {{ if eq $i 0 }}
+                        {{ $.Scratch.Set "url" (index ($.Scratch.Get "permalinkparts") $i) }}
+                    {{ else }}
+                        {{ $.Scratch.Add "url" (print (index ($.Scratch.Get "permalinkparts") $i) "/") }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ if gt (len $part ) 0 }}
+                / <a href="/{{ $.Scratch.Get "url" }}">{{ humanize (replace $part "posts" "blog") }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+   
+    </aside>
+  </section>
+    
+</header>

@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+<main>
+
+  {{ .Scratch.Set "url" "/img/banner"}}
+  {{ .Scratch.Set "alt" "Shauna Gra main banner image"}}
+  {{ .Scratch.Set "class" "img-responsive"}}
+  {{ .Scratch.Set "width" "200"}}
+  {{ .Scratch.Set "height" "200"}}
+  {{ partial "imageDesktopMobile.html" . }}
+
+  <section class="grid grid-main color1-bg">
+    <aside class="inner-block-left flex-center flex-column padding-large">
+      <h1>Personalised frames ireand</h1>
+      <p>We try to source all of our frames in Ireland. 90% of them are handmade by a company in Cork and made using
+        high quality materials. We ship our frames nationwide. Please contact us if you require a frame to be shipped
+        worldwide, and we can see if we can accommodate your request.
+
+        We also create high quality personalised frames and cards to match our frames for all occasions. We are proud to
+        say our clients give us very good feedback and many 5-star ratings.
+      </p>
+      <p>
+        Furthermore, we offer personalised frames using word tiles, and also we can do a printed design in a
+        personalised gift frames. Whether you are looking for personalised frames Ireland, or personalised box frames
+        Ireland, we have frames to suit.
+
+        Clients have the option to personalise our frames with any name/s or words. We have created many personalised
+        name frames for various occasions including baby, family, wedding, new house and personalised birthday frame.
+        Our range also includes Irish blessings, communion, kids, memorial frames Ireland, teachers, fathers day,
+        mothers day.
+
+        Please contact me to discuss your options if you have an idea for a frame in mind. You can also order directly
+        through our custom order form.</p>
+    </aside>
+    <aside class="inner-block-right flex-center">
+      {{ .Scratch.Set "url" "/img/index-page-image-1"}}
+      {{ .Scratch.Set "alt" "Personalised frames image"}}
+      {{ .Scratch.Set "class" "img-responsive"}}
+      {{ partial "imageDesktopMobile.html" . }}
+    </aside>
+  </section>
+  <section class="grid grid-main color2-bg margin-large-t-b padding-large-t-b">
+    <aside class="full-width-element text-center">
+      <h2>Personalised Frames</h2>
+    </aside>
+  </section>
+  
+
+
+
+</main>
+
+
+{{ end }}
