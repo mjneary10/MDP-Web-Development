@@ -43,41 +43,14 @@ input[type=submit]:hover {
 hr{
   margin: 0;
 }
-.filter-buttons{
-  display: block;
-  border: 1px solid;
-  margin: 5px;
-  padding: 2px;
-  text-align: center;
-  border-radius: 5px;
-}
-a.filter-buttons {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-a.filter-buttons:hover{
-  background-color: rgb(237, 218, 233);
-  text-decoration: none;
-}
-.active-filter{
-  background-color: rgb(237, 218, 233);
-}
 
-.grid-top-nav{
- display: flex;
- 
-}
+
 .logo4{
   grid-column: 1/2;
   grid-row: 1;
   justify-self: flex-start;
 }
-.cart{
-  justify-self: center;
-  grid-column: 2/3;
-  grid-row: 1;
-  
-}
+
 
 .mainNav4{
   grid-column: 1/5;
@@ -101,9 +74,6 @@ a.filter-buttons:hover{
   grid-column: 3/4;
   grid-row: 1;
   text-align: right;
-}
-
-.burger{
   justify-self: flex-end;
   margin: 5px;
   border: 1px solid;
@@ -116,11 +86,6 @@ a.filter-buttons:hover{
   margin: 5px;
 }
 
-
-
-
-
-
 @media screen and (min-width:600px) {
   .grid-top-nav {
     grid-template-columns: 1fr minmax(30em, 50em) 1fr;
@@ -130,25 +95,14 @@ a.filter-buttons:hover{
   width: 50%;
 }
 
-.filter-list{
-  display: flex;
-}
 
-.cart {
-    justify-self: right;
-    grid-column: 4/5;
-    grid-row: 1;
-    width: 20px;
-    height: 20px;
-   
-}
 
 .burger {
     display: none;
 }
 
 .mainNav4 {
-    grid-column: 2/3;
+    grid-column: 1/5;
     grid-row: 1;
     display: block;
    
@@ -205,7 +159,7 @@ body {
   font-size: 16px;
   line-height: 1.42857143;
   color: #898388;
-  text-align: center;
+  
 }
 
 h1, h2, h3, h4 {
@@ -302,24 +256,20 @@ body {
 
 /* Grid items */
 
-.grid {
-  display: grid;
-}
 
 .grid-top-nav {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 
 .grid-footer {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.grid-prod-page {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-}
+
 
 
 /* Flex items */
@@ -402,127 +352,12 @@ body {
 
 /* Product related items */
 
-.grid-products {
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
 
-.price {
-  margin-top: auto;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: red;
-}
- .cta {
- 
-}
-
-
-.product-images {
-  grid-row: 1;
-}
-
-.product-thumbs {
-  gap: 10px;
-  grid-row: 2;
-  overflow: scroll;
- 
-}
-
-.product-custom-boxes {
-  width: 100%;
-
-}
-.product-custom-boxes td{
-  background-color: white;
-}
-.product-custom-boxes a:hover{
-text-decoration: none;
-}
-
-
-
-.buyNowButton {
-  background-color: #ed9f9d;
-  color: #fff;
-}
-
-.mySlides {
-  display: none;
-}
-.mySlides:first-child{
-  display: block;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-.prev,
-.next {
- 
-  background-color: rgb(241, 198, 157);
-  cursor: pointer;
-  position: absolute;
-  top: 380px;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev{
-  left: 0;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(210, 161, 161, 0.8);
-}
-
-.numbertext {
-  color: black;
-  background-color: rgb(241, 198, 157);
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 100;
-}
-
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
 
 @media screen and (min-width:600px) {
 
   .grid-main {
+    display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 42em)) 1fr;
   }
 
@@ -547,6 +382,7 @@ text-decoration: none;
   }
 
   .grid-top-nav {
+    display: grid;
     grid-template-columns: 1fr minmax(30em, 50em) 1fr;
   }
 
@@ -575,14 +411,3 @@ text-decoration: none;
   position: relative;
 }
 }
-
-  /* ---------wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww-------------------------- */
-  .test-color {
-    background-color: rgb(35, 138, 229);
-  }
-
-  .inner-block-left {
-   
-  }
-
- 
