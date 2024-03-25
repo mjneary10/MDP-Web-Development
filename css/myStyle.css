@@ -4,6 +4,10 @@
   --color-secondary: #e67e22;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .color-main-bg {
   background-color: var(--color-main);
 }
@@ -12,7 +16,7 @@
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h1 {
@@ -23,7 +27,7 @@ h1 {
 
 a {
   text-decoration: none;
-  font-weight: bold;
+
 }
 
 a:link {
@@ -47,18 +51,20 @@ a:active {
 
 .btn:link,
 .btn:visited {
-  background-color: var(--color-secondary);
-  color: white;
-  padding: 14px 25px;
+  position: relative;
+  background-color: white;
+  color: black;
+  padding: .5em 1em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: .5em;
+  margin: 0.5em;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: rgb(53, 34, 34);
+  background-color: rgb(245, 212, 212);
 }
 
 
@@ -67,27 +73,6 @@ a:active {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.grid--wide {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 70em) 1fr;
-}
-
-.grid--internal {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-column: 2/3;
-}
-
-.grid--1-column{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.grid--2-columns{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .img-responsive {
@@ -100,197 +85,144 @@ a:active {
   font-weight: bold;
 }
 
-/* ------------------------------------------ */
+.bold-text {
+  font-weight: bold;
+}
 
-/* Top navigation */
-
-.header__nav-container {
+.grid--bleed {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4em;
-  align-items: center;
-  grid-column: 1/4;
-  grid-row: 1;
-  padding: 20px 40px;
+  grid-template-columns: 1fr minmax(auto, 80em) 1fr;
 }
 
-.nav-container__logo {
-  height: 1.4em;
-  grid-column: 1/2;
-  grid-row: 1;
+.grid-auto-fit{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 20px;
 }
 
-.nav-container__burger {
-  grid-row: 1;
-  justify-self: flex-end;
-}
-
-.nav-container__nav-bar {
-  grid-column: 1/3;
-  display: none;
-
-  text-align: center;
-}
-
-.nav-container__nav-bar a {
-  display: block;
-  margin-bottom: 1px;
-  padding: 10px 20px;
-}
-
-.toggle {
-  display: block;
-
-}
-
-/* Introduction section */
-.intro {
-  gap: 80px;
-  align-items: center;
-  padding: 30px 0 50px 0;
-}
-
-.grid-meals {
-  align-items: center;
-  justify-content: space-around;
-  gap: 30px;
-}
-
-/* As seen in section */
-.as-seen-in {
+.grid-no-bleed{
   grid-column: 2/3;
-  text-align: center;
-  padding: 50px 0;
 }
 
-.as-seen-in__logos-seen-in {
+.flex-column {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.margin-large-t-b{
+  margin: 10em 0;
+}
+
+/* Main top banner ------------------------------------------ */
+.banner-cta {
+  background-color: #e67e22;
+  color: white;
+}
+
+.banner-cta__content {
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-main__top {
   justify-content: space-between;
 }
 
-.as-seen-in__logos-seen-in img{
-  max-width: 15%;
-  filter: brightness(0);
-  opacity: 50%;
+.banner-main__top>* {
+  padding: 50px;
 }
 
-/* How to section */
-.how-to{
-  display: flex;
-  flex-direction: column;
-  grid-column: 1/3;
-}
-.how-to__text-1, .how-to__text-2, .how-to__text-3{
-  margin-bottom: 100px;
+.banner-main {
+  position: relative;
+  color: white;
 }
 
-/* Benefits section */
-.benefits {
-  align-items: center;
+.banner-main::before {
+  content: "";
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(30%);
+  z-index: -1;
 }
 
-.big-number {
-  font-size: 5em;
-  margin: 0;
-  padding: 0;
+.banner-main__bottom {
+  text-align: center;
 }
 
-/* Recepie section */
-.recepies {
-  gap: 5em;
+.web-dev-img {
+  height: 300px;
 }
 
-.card {
+/*Benifits section ------------------------ */
 
-  border-radius: 10px;
-  overflow: hidden;
-  
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+.benifits{
+   text-align: center;
 }
 
-.recepie-icon {
-  width: 5em;
+.benifits ul li{
+  text-align: justify;
+  padding: 2em;
 }
 
-/* Testemonials section */
+/* Reviews section ----------------------------------------------------- */
+
 .testemonials{
- 
-  grid-column: 2/3;
+  position: relative;
 }
 
-.testemonials-images{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
- 
+.testemonials::before {
+  content: "";
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -2;
 }
 
-.person img{
-  width: 3em;
-  border-radius: 30px;
+/* Web development secion --------------------------------------*/
+.web-dev{
+  height: 500px;
+  background-color: blue;
 }
 
-/* -------------------------------------------------------------------------------- */
+/* About me section ---------------------------------------------------------- */
+.about-me{
+  position: relative;
+  text-align: center;
+}
+
+.about-me::before {
+  content: "";
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -2;
+}
+.about-me-image{
+  border-radius: 100px;
+}
+
 @media screen and (min-width:600px) {
 
-  /* Top navigation on large screens */
-  .nav-container__nav-bar {
-    display: flex;
-    grid-column: 1/3;
-    grid-row: 1;
-    justify-self: flex-end;
-    align-items: center;
+  .banner-cta__content,
+  .banner-main__top {
+    flex-direction: row;
   }
 
-  .nav-container__nav-bar a {
-    margin-right: 10px;
-  }
-
-  .nav-container__nav-bar .last-link {
-    margin-right: 0;
-  }
-
-  .nav-container__burger {
-    display: none;
-  }
-  /* end of nav */
-
-  .how-to{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column: 2/3;
-    align-items: center;
-    row-gap: 100px;
-  
-  }
-  .how-to__text-1{
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .how-to__img-2{
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .how-to__text-2{
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .how-to__text-3{
-    grid-column: 1;
-    grid-row: 3;
-  }
-
-  .how-to__img-3{
-    grid-column: 2;
-    grid-row: 3;
-  }
- .testemonials-text{
-   display: grid;
-   grid-template-columns:  1fr 1fr;
-  }
-
-
-  /* End top navigation on large screens */
 
 }
