@@ -94,13 +94,13 @@ a:active {
   grid-template-columns: 1fr minmax(auto, 80em) 1fr;
 }
 
-.grid-auto-fit{
+.grid-auto-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   gap: 20px;
 }
 
-.grid-no-bleed{
+.grid-no-bleed {
   grid-column: 2/3;
 }
 
@@ -116,7 +116,7 @@ a:active {
   align-items: center;
 }
 
-.margin-large-t-b{
+.margin-large-t-b {
   margin: 10em 0;
 }
 
@@ -167,18 +167,18 @@ a:active {
 
 /*Benifits section ------------------------ */
 
-.benifits{
-   text-align: center;
+.benifits {
+  text-align: center;
 }
 
-.benifits ul li{
-  
+.benifits ul li {
+
   padding: 2em;
 }
 
 /* Reviews section ----------------------------------------------------- */
 
-.testemonials{
+.testemonials {
   position: relative;
 }
 
@@ -196,9 +196,14 @@ a:active {
 }
 
 /* Web development secion --------------------------------------*/
-.go-to-course{
+.go-to-course {
   background-color: #848181;
 }
+
+.go-to-course__content{
+
+}
+
 
 .accordion {
   background-color: #eee;
@@ -213,7 +218,8 @@ a:active {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc;
 }
 
@@ -238,7 +244,7 @@ a:active {
 }
 
 /* About me section ---------------------------------------------------------- */
-.about-me{
+.about-me {
   position: relative;
   text-align: center;
 }
@@ -255,22 +261,25 @@ a:active {
   opacity: 0.2;
   z-index: -2;
 }
-.about-me-image{
+
+.about-me-image {
   border-radius: 100px;
 }
-/* Footer section ------------------------------------------------------- */
-.footer-content > *{
 
-}
-.copyright{
+/* Footer section ------------------------------------------------------- */
+.copyright {
   background-color: #f8e0e0;
 }
 
 @media screen and (min-width:600px) {
 
   .banner-cta__content,
-  .banner-main__top {
+  .banner-main__top, .go-to-course__content {
     flex-direction: row;
+  }
+
+  .go-to-course__content > *{
+   
   }
 
 
