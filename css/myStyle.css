@@ -52,7 +52,7 @@ a:active {
 .btn:link,
 .btn:visited {
   position: relative;
-  background-color: white;
+  background-color: rgb(249, 117, 117);
   color: black;
   padding: .5em 1em;
   text-align: center;
@@ -197,7 +197,7 @@ a:active {
 
 /* Web development secion --------------------------------------*/
 .go-to-course{
-
+  background-color: #848181;
 }
 
 .accordion {
