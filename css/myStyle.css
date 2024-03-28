@@ -200,9 +200,6 @@ a:active {
   background-color: #848181;
 }
 
-.go-to-course__content{
-
-}
 
 
 .accordion {
@@ -267,6 +264,14 @@ a:active {
 }
 
 /* Footer section ------------------------------------------------------- */
+.footer-content{
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.footer-content > *{
+  padding: 5em;
+}
 .copyright {
   background-color: #f8e0e0;
 }
@@ -274,13 +279,11 @@ a:active {
 @media screen and (min-width:600px) {
 
   .banner-cta__content,
-  .banner-main__top, .go-to-course__content {
+  .banner-main__top, .go-to-course__content,.footer-content {
     flex-direction: row;
   }
 
-  .go-to-course__content > *{
-   
-  }
+
 
 
 }
